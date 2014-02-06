@@ -274,7 +274,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-          @attr name android:bottomLabelHeight
+          @attr name com.example.womenshearthealth:bottomLabelHeight
         */
         public static final int ChartView_bottomLabelHeight = 7;
         /**
@@ -286,7 +286,7 @@ in (inches), mm (millimeters).
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name android:gridLineColor
+          @attr name com.example.womenshearthealth:gridLineColor
         */
         public static final int ChartView_gridLineColor = 0;
         /**
@@ -299,7 +299,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-          @attr name android:gridLineWidth
+          @attr name com.example.womenshearthealth:gridLineWidth
         */
         public static final int ChartView_gridLineWidth = 1;
         /**
@@ -310,7 +310,7 @@ in (inches), mm (millimeters).
           <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be an integer value, such as "<code>100</code>".
-          @attr name android:gridLinesHorizontal
+          @attr name com.example.womenshearthealth:gridLinesHorizontal
         */
         public static final int ChartView_gridLinesHorizontal = 2;
         /**
@@ -321,7 +321,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be an integer value, such as "<code>100</code>".
-          @attr name android:gridLinesVertical
+          @attr name com.example.womenshearthealth:gridLinesVertical
         */
         public static final int ChartView_gridLinesVertical = 3;
         /**
@@ -334,7 +334,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-          @attr name android:leftLabelWidth
+          @attr name com.example.womenshearthealth:leftLabelWidth
         */
         public static final int ChartView_leftLabelWidth = 4;
         /**
@@ -347,7 +347,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-          @attr name android:rightLabelWidth
+          @attr name com.example.womenshearthealth:rightLabelWidth
         */
         public static final int ChartView_rightLabelWidth = 6;
         /**
@@ -360,7 +360,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-          @attr name android:topLabelHeight
+          @attr name com.example.womenshearthealth:topLabelHeight
         */
         public static final int ChartView_topLabelHeight = 5;
         /** Attributes that can be used with a TextView.
@@ -396,7 +396,7 @@ in (inches), mm (millimeters).
 <tr><td><code>medium</code></td><td>64</td><td></td></tr>
 <tr><td><code>thin</code></td><td>128</td><td></td></tr>
 </table>
-          @attr name android:textStyle
+          @attr name com.example.womenshearthealth:textStyle
         */
         public static final int TextView_textStyle = 0;
     };
