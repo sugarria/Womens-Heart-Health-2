@@ -3,5 +3,8 @@
 
     <string name="app_name">Women\'s Heart Health</string>
     <string name="action_settings">Settings</string>
+    <string name="your_birthday">Your Birthday</string>
+       <string name="your_weight">Your Weight</string>
+        <string name="save_information">Save Information</string>
 
 </resources>
