@@ -14,12 +14,13 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.example.newwomenshearthealth.NewWomensHeartHealth"
-            android:label="@string/app_name" >
+            android:name="com.example.newwomenshearthealth.Splash"
+            android:label="@string/app_name"
+            android:launchMode="standard" >
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="com.example.newwomenshearthealth.Login" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
     </application>
