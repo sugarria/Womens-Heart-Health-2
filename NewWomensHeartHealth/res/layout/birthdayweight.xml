@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_temp"
+    android:orientation="vertical" >
+
+<TextView
+    android:id="@+id/Weight"
+    android:layout_width="134dp"
+    android:layout_height="40dp"
+    android:layout_alignLeft="@+id/Birthday"
+    android:layout_below="@+id/Birthday"
+    android:paddingTop="@dimen/Value"
+    android:text="@string/your_weight"
+    android:textSize="@dimen/Value" />
+
+<TextView
+    android:id="@+id/Birthday"
+    android:layout_width="134dp"
+    android:layout_height="40dp"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"
+    android:layout_marginTop="36dp"
+    android:paddingTop="@dimen/Value"
+    android:text="@string/your_birthday"
+    android:textSize="@dimen/Value" />
+
+<EditText
+    android:id="@+id/date"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentRight="true"
+    android:layout_alignTop="@+id/Birthday"
+    android:layout_toRightOf="@+id/Birthday"
+    android:ems="10"
+    android:inputType="date" >
+
+    <requestFocus />
+</EditText>
+
+<EditText
+    android:id="@+id/weight"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignBaseline="@+id/Weight"
+    android:layout_alignBottom="@+id/Weight"
+    android:layout_alignLeft="@+id/date"
+    android:ems="10"
+    android:inputType="number" />
+
+<Button
+    android:id="@+id/save_information"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:text="@string/save_information" />
+
+</RelativeLayout>
