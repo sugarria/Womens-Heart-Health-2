@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Women\'s Heart Health</string>
+    <string name="app_name">Saving Hearts</string>
     <string name="action_settings">Settings</string>
     <string name="your_birthday">Your Birthday</string>
        <string name="your_weight">Your Weight</string>
