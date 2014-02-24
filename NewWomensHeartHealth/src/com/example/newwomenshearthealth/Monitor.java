@@ -1,18 +1,23 @@
 package com.example.newwomenshearthealth;
 
-import android.app.Activity;
+import com.example.newwomenshearthealth.R;
 import android.os.Bundle;
-import android.widget.TextView;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
-public class Monitor extends Activity {
+public class Monitor extends Fragment  {
+
+	
 	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
-		super.onCreate(savedInstanceState);
-		TextView textView = new TextView (this);
-		textView.setText("Monitor");
-		setContentView(textView);
-		
-	}
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+			Bundle savedInstanceState) {
 
+		View rootView = inflater.inflate(R.layout.monitor, container, false);
+		
+		return rootView;
+	}
+	
 }
+

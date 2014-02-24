@@ -35,7 +35,7 @@ public class Splash extends Activity {
 				} finally {
 					finish();
 					startActivity(new Intent(
-							"com.example.newwomenshearthealth.BirthdayWeight"));
+							"com.example.newwomenshearthealth.Main"));
 				}
 			}
 		};
