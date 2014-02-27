@@ -53,12 +53,12 @@ public class HomeFragment extends Fragment implements OnClickListener{
 		Intent intent = null;
 
 		switch (v.getId()) {
-		/*	
+			
 		case R.id.target_hr_card: // Display info on target heart rates
 			intent = new Intent(getActivity(), TargetHRInformationActivity.class);
 			getActivity().startActivity(intent);
 			break;
-		 */
+		 
 		}
 	}
 }
