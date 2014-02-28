@@ -3,6 +3,7 @@ package com.example.newwomenshearthealth;
 import com.example.newwomenshearthealth.adapter.TabsPagerAdapter;
 import com.example.newwomenshearthealth.helper.SettingsHelper;
 
+
 import android.app.ActionBar;
 import android.app.Dialog;
 import android.app.ActionBar.Tab;
@@ -14,6 +15,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
+import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;
@@ -158,5 +160,30 @@ protected void dismissSplashScreen() {
 		mSplashScreenDialog = null;
 	}
 }
+/**
+ * Starts selected activity when user selects options menu item
+ * @return boolean returns true if valid menu option selected
+ */
+/*
+@Override
+public boolean onOptionsItemSelected(MenuItem item) {
+
+	switch(item.getItemId()) {
+	
+	case R.id.menu_settings: //user selects "Settings" from the menu
+		Intent intent = new Intent(this, Settings.class);
+		this.startActivity(intent);
+		return true;
+	case R.id.menu_about: //user selects "About" from the menu
+		Intent intent2 = new Intent(this, About.class);
+		this.startActivity(intent2);
+		return true;
+		
+	default:
+		return false;
+			
+	}
+	*/
 }
+
 
