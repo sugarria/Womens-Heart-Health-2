@@ -6,6 +6,16 @@
     android:orientation="vertical"
     tools:context=".SettingsActivity" >
     
+      <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+    
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -46,15 +56,16 @@
 
     <Button
         android:id="@+id/btn_settings_savebutton"
-        style="?android:attr/buttonStyleSmall"
+        style="@style/button_text"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="40dp"
         android:layout_marginLeft="40dp"
-        android:background="#FF0000"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/saving_info_button"
         android:gravity="center"
-        android:text="Save Information" 
-        android:textColor="#FFFFFF"/>
+        android:onClick="startButton"
+        android:text="@string/save_information" />
     
+    </LinearLayout>
 </LinearLayout>
