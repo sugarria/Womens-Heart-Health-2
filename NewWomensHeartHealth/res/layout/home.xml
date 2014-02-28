@@ -8,21 +8,19 @@
     <LinearLayout
         android:id="@+id/linearlayout_homeFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         tools:context=".HomeFragment" >
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_marginBottom="20dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginTop="20dp"
             android:layout_weight="1"
             android:orientation="vertical" >
-
-            <!-- Start Heart Rate card -->
 
             <LinearLayout
                 android:id="@+id/target_hr_card"
@@ -105,30 +103,32 @@
                 android:id="@+id/targerHRCardDropshadow"
                 android:layout_width="fill_parent"
                 android:layout_height="2dip"
-                android:layout_below="@id/target_hr_card"
                 android:background="@drawable/dropshadow" />
-            <!-- End Heart Rate card -->
-            <!-- End METs card -->
-
-
-           
 
             <View
                 android:id="@+id/graphCardDropshadow2"
                 android:layout_width="fill_parent"
                 android:layout_height="2dip"
                 android:background="@drawable/dropshadow" />
+            
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:text=" "
+                android:textAppearance="?android:attr/textAppearanceLarge" />
 
             <Button
-                android:id="@+id/button1"
+                style="@style/button_text"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginTop="20dp"
-                android:background="#FF0000"
-                android:textColor="#FFFFFF"
-                android:text="Button" />
+                android:layout_marginTop="100dp"
+                android:background="@drawable/connect_button"
+                android:gravity="center"
+                android:onClick="startButton"
+                android:text="@string/start_workout" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -136,9 +136,6 @@
                 android:ems="10"
                 android:text=" "
                 android:textAppearance="?android:attr/textAppearanceLarge" />
-            <!-- End Calories card -->
-
-            <!-- Start Random Facts Card -->
 
             <LinearLayout
                 android:id="@+id/random_facts_card"
@@ -187,9 +184,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="2dip"
                 android:background="@drawable/dropshadow" />
-            <!-- End Random Facts Card -->
-
         </LinearLayout>
+
     </LinearLayout>
 
 </ScrollView>
