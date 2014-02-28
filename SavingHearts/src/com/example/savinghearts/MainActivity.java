@@ -2,6 +2,8 @@ package com.example.savinghearts;
 
 import java.util.Locale;
 
+import com.example.savinghearts.helpers.SettingsHelper;
+
 import android.app.ActionBar;
 import android.app.Dialog;
 import android.app.FragmentTransaction;
@@ -36,7 +38,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 	 * {@link android.support.v4.app.FragmentStatePagerAdapter}.
 	 */
 	SectionsPagerAdapter mSectionsPagerAdapter;
-	final private int SPLASH_DURATION = 2000;
+	final private int SPLASH_DURATION = 5000;
 
 	/**
 	 * The {@link ViewPager} that will host the section contents.
@@ -163,12 +165,23 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
-	
+
+	/**
+	 * Method for Start Workout button on Home Fragment
+	 */
 	public void startButton (View view)
 	{
 		System.out.println("trying to press start button..");
-		Intent intent = new Intent(this, SettingsActivity.class);
+		Intent intent = new Intent(this, METSListActivity.class);
 		startActivity(intent);
+	}
+	
+	/**
+	 * Method for Connect To Device button on Monitor Fragment
+	 */
+	public void sendMessage (View view)
+	{
+		
 	}
 	
 	/**

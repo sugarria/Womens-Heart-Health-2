@@ -1,7 +1,6 @@
 package com.example.savinghearts;
 
 import java.util.Date;
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.text.util.Linkify;
@@ -22,5 +21,17 @@ public class AboutActivity extends Activity{
 	@Override
 	protected void onRestoreInstanceState(Bundle savedInstanceState) {
 		super.onRestoreInstanceState(savedInstanceState);
+	}
+	
+	/**
+	 * Method called on starting AboutFragment to add links to AboutPage text
+	 */
+	@Override
+	public void onStart() {
+		super.onStart();
+		
+		TextView textview = (TextView)this.findViewById(R.id.txtvw_about_text);
+		Linkify.addLinks(textview, Linkify.WEB_URLS);
+		
 	}
 }

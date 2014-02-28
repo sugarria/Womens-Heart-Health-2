@@ -19,14 +19,14 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:paddingTop="15dp"
-            android:text="Target Heart Rates" />
+            android:text="METs" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:paddingTop="15dp"
-            android:text="@string/target_hr_activity" />
+            android:text="@+string/totals_activity" />
 
     </LinearLayout>
 

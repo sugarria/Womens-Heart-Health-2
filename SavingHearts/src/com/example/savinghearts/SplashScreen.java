@@ -12,7 +12,7 @@ import android.widget.ImageView;
 
 public class SplashScreen extends Activity{
 	
-	final private int SPLASH_DURATION = 2000;
+	final private int SPLASH_DURATION = 5000;
 	private Dialog mSplashScreenDialog;
 	
 	public SplashScreen() {}

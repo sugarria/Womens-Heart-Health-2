@@ -173,11 +173,11 @@ public class MainActivity extends Activity {
 		mActionBar.addTab(metsTab);
 		
 		// About tab
-		Tab aboutTab = mActionBar.newTab();
-		aboutTab.setText("About");
-		aboutTab.setTabListener(new TabListener<AboutFragment>(this,
-				"about", AboutFragment.class));
-		mActionBar.addTab(aboutTab);
+		Tab monitorTab = mActionBar.newTab();
+		monitorTab.setText("About");
+		monitorTab.setTabListener(new TabListener<MonitorFragment>(this,
+				"monitor", MonitorFragment.class));
+		mActionBar.addTab(monitorTab);
 		
 	}
 

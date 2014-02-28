@@ -1,7 +1,8 @@
-package com.example.savinghearts;
+package com.example.savinghearts.helpers;
 
 import java.util.Calendar;
 import java.util.Date;
+import com.example.savinghearts.R;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;

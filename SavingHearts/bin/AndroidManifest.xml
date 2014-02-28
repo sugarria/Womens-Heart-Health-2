@@ -26,6 +26,9 @@
         <activity android:name="AboutActivity"></activity>
         <activity android:name="SplashScreen"></activity>
         <activity android:name="TargetHRInformationActivity"></activity>
+        <activity android:name="METSListActivity"></activity>
+        <activity android:name="AllMetsPrintedActivity"></activity>
+        <activity android:name="MetsInformationActivity"></activity>
     </application>
 
 </manifest>
