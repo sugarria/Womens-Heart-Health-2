@@ -3,6 +3,8 @@ package com.example.savinghearts;
 import java.util.Calendar;
 import java.util.Date;
 
+import com.example.savinghearts.helpers.SettingsHelper;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.AlertDialog;

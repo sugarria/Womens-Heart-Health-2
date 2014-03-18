@@ -1,6 +1,10 @@
 package com.example.savinghearts;
 
 import java.util.Locale;
+
+import com.example.savinghearts.helpers.SettingsHelper;
+import com.example.savinghearts.pluginsampler.Activity_Dashboard;
+
 import android.app.ActionBar;
 import android.app.Dialog;
 import android.app.FragmentTransaction;
@@ -16,6 +20,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,8 +28,7 @@ import android.view.View.OnTouchListener;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class MainActivity extends FragmentActivity implements
-		ActionBar.TabListener {
+public class MainActivity extends FragmentActivity implements ActionBar.TabListener {
 
 	/**
 	 * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -35,20 +39,20 @@ public class MainActivity extends FragmentActivity implements
 	 * {@link android.support.v4.app.FragmentStatePagerAdapter}.
 	 */
 	SectionsPagerAdapter mSectionsPagerAdapter;
-	final private int SPLASH_DURATION = 2000;
-	private Dialog mSplashScreenDialog;
+	final private int SPLASH_DURATION = 5000;
 
 	/**
 	 * The {@link ViewPager} that will host the section contents.
 	 */
 	ViewPager mViewPager;
+	private Dialog mSplashScreenDialog;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
-        //showSplashScreen();
-        
+        showSplashScreen();
+	  	
         setContentView(R.layout.activity_main);
         
 		// Set up the action bar.
@@ -90,7 +94,7 @@ public class MainActivity extends FragmentActivity implements
 	/**
 	 * Method to display splash screen image when starting the app
 	 */
-	/*protected void showSplashScreen() {
+	protected void showSplashScreen() {
 		
 		ImageView splashscreen = new ImageView(this);
 		splashscreen.setOnTouchListener(new OnTouchListener()
@@ -131,11 +135,21 @@ public class MainActivity extends FragmentActivity implements
 				
 				} else {
 					return;
-				}return;
+				}
 	    	  
 	      }
 	    }, SPLASH_DURATION);
 		
+	}
+	
+	/**
+	 * Method used to hide splash screen image
+	 */
+	protected void dismissSplashScreen() {
+		if (mSplashScreenDialog != null) {
+			mSplashScreenDialog.dismiss();
+			mSplashScreenDialog = null;
+		}
 	}
 
 	private boolean isInitalRun() {
@@ -144,17 +158,7 @@ public class MainActivity extends FragmentActivity implements
 	
 	private void setInitialRun (boolean initRun) {
 		SettingsHelper.setInitialRun(this, initRun);
-	}*/
-	
-	/**
-	 * Method used to hide splash screen image
-	 */
-	/*protected void dismissSplashScreen() {
-		if (mSplashScreenDialog != null) {
-			mSplashScreenDialog.dismiss();
-			mSplashScreenDialog = null;
-		}
-	}*/
+	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -162,30 +166,47 @@ public class MainActivity extends FragmentActivity implements
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
+
+	/**
+	 * Method for Start Workout button on Home Fragment
+	 */
+	public void startButton (View view)
+	{
+		System.out.println("trying to press start button..");
+		Intent intent = new Intent(this, METSListActivity.class);
+		startActivity(intent);
+	}
+	
+	/**
+	 * Method for Connect To Device button on Monitor Fragment
+	 */
+	public void sendMessage (View view)
+	{
+		Intent intent = new Intent(this, Activity_Dashboard.class);
+		startActivity(intent);
+	}
 	
 	/**
 	 * Starts selected activity when user selects options menu item
 	 * @return boolean returns true if valid menu option selected
 	 */
 	//@Override
-	/*public boolean onOptionsItemSelected(MenuItem item) {
+	public boolean onOptionsItemSelected(MenuItem item) {
 	
 		switch(item.getItemId()) {
 		
-		case R.id.menu_settings: //user selects "Settings" from the menu
+		case R.id.action_settings: //user selects "Settings" from the menu
 			Intent intent = new Intent(this, SettingsActivity.class);
 			this.startActivity(intent);
 			return true;
-		case R.id.menu_about: //user selects "About" from the menu
+		case R.id.action_about: //user selects "About" from the menu
 			Intent intent2 = new Intent(this, AboutActivity.class);
 			this.startActivity(intent2);
 			return true;
 		default:
-			return false;
-				
-		}
-		
-	}*/
+			return false;				
+		}		
+	}
 
 	@Override
 	public void onTabSelected(ActionBar.Tab tab,
@@ -227,9 +248,9 @@ public class MainActivity extends FragmentActivity implements
 				args.putInt(HomeFragment.ARG_SECTION_NUMBER, position + 1);
 				return fragment;
 			case 1:
-				fragment = new DummySectionFragment();
+				fragment = new LogFragment();
 				fragment.setArguments(args);
-				args.putInt(DummySectionFragment.ARG_SECTION_NUMBER, position + 1);
+				args.putInt(LogFragment.ARG_SECTION_NUMBER, position + 1);
 				return fragment;
 			case 2:
 				fragment = new MonitorFragment();
@@ -238,17 +259,6 @@ public class MainActivity extends FragmentActivity implements
 				return fragment;
 			}
 			return null;
-			
-			
-			// getItem is called to instantiate the fragment for the given page.
-			// Return a DummySectionFragment (defined as a static inner class
-			// below) with the page number as its lone argument.
-			/*Fragment fragment = new MonitorFragment();
-			Bundle args = new Bundle();
-			args.putInt(DummySectionFragment.ARG_SECTION_NUMBER, position + 1);
-			fragment.setArguments(args);
-			return fragment;
-			*/
 		}
 
 		@Override
@@ -287,32 +297,5 @@ public class MainActivity extends FragmentActivity implements
 	/*public void sendMessage(View view) {
 	
 	}*/
-
-	/**
-	 * A dummy fragment representing a section of the app, but that simply
-	 * displays dummy text.
-	 */
-	public static class DummySectionFragment extends Fragment {
-		/**
-		 * The fragment argument representing the section number for this
-		 * fragment.
-		 */
-		public static final String ARG_SECTION_NUMBER = "section_number";
-
-		public DummySectionFragment() {
-		}
-
-		@Override
-		public View onCreateView(LayoutInflater inflater, ViewGroup container,
-				Bundle savedInstanceState) {
-			View rootView = inflater.inflate(R.layout.fragment_main_dummy,
-					container, false);
-			TextView dummyTextView = (TextView) rootView
-					.findViewById(R.id.section_label);
-			dummyTextView.setText(Integer.toString(getArguments().getInt(
-					ARG_SECTION_NUMBER)));
-			return rootView;
-		}
-	}
 
 }
